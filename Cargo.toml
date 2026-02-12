@@ -7,7 +7,7 @@ members = [
     "crates/x509-verifier-rust-crypto",
     "crates/risc0-methods",
     "crates/sp1-methods",
-    "crates/pico-methods",
+    # "crates/pico-methods",  # Requires Rust nightly (edition 2024)
     "crates/utils",
 ]
 default-members = [
@@ -39,7 +39,7 @@ aws-nitro-enclave-attestation-prover = { path = "crates/prover", default-feature
 x509-verifier-rust-crypto = { path = "crates/x509-verifier-rust-crypto" }
 risc0-methods = { path = "crates/risc0-methods" }
 sp1-methods = { path = "crates/sp1-methods" }
-pico-methods = { path = "crates/pico-methods" }
+# pico-methods = { path = "crates/pico-methods" }  # Requires Rust nightly (edition 2024)
 aws-nitro-enclave-attestation-utils = { path = "crates/utils", default-features = false }
 
 clap = { version = "4.0", features = ["derive", "env"] }
@@ -57,8 +57,9 @@ risc0-ethereum-contracts = { git = "https://github.com/risc0/risc0-ethereum", ta
 
 sp1-sdk = { version = "^5.0.0", default-features = false, features = ["network"] }
 
-pico-sdk = { git = "https://github.com/automata-network/pico.git", branch = "evm_defer_proof" }
-pico-vm = { git = "https://github.com/automata-network/pico.git", branch = "evm_defer_proof" }
+# pico dependencies disabled - requires Rust nightly (edition 2024)
+# pico-sdk = { git = "https://github.com/automata-network/pico.git", branch = "evm_defer_proof" }
+# pico-vm = { git = "https://github.com/automata-network/pico.git", branch = "evm_defer_proof" }
 
 alloy-primitives = { version = "1.2" }
 tokio = { version = "1.35", features = ["full"] }
